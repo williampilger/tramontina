@@ -1,17 +1,18 @@
+//V0.0
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <conio2.h>
 #include <windows.h>
 
-#define DELAY_PADRAO_MEIO 20 //define delay padr„o entre uma requisiÁ„o e outr (dado no final de uma requisiÁ„o
-#define DELAY_PADRAO_FIM 100 //define delay padr„o entre as etapas da requisiÁ„o. Dados apÛs o preenchimento de cada campo
-#define DELAY_ENTRE_CARACTERES 100 //delay dado depois de cada inserÁ„o
+#define DELAY_PADRAO_MEIO 20 //define delay padr√£o entre uma requisi√ß√£o e outr (dado no final de uma requisi√ß√£o
+#define DELAY_PADRAO_FIM 100 //define delay padr√£o entre as etapas da requisi√ß√£o. Dados ap√≥s o preenchimento de cada campo
+#define DELAY_ENTRE_CARACTERES 100 //delay dado depois de cada inser√ß√£o
 #define LOG 1 //seta em 1 pra ver o LOG
 
-int SimulaTecla(char tecla, int t){//tecla È a tecla 0-255, t È o tempo em ms que a tecla deve ficar pressionada
+int SimulaTecla(char tecla, int t){//tecla √© a tecla 0-255, t √© o tempo em ms que a tecla deve ficar pressionada
 	INPUT ip;
-	//Copiado, N„o sei exatamente o significado
+	//Copiado, N√£o sei exatamente o significado
 	ip.type=INPUT_KEYBOARD;
 	ip.ki.wScan=0;
 	ip.ki.time=0;
@@ -22,7 +23,7 @@ int SimulaTecla(char tecla, int t){//tecla È a tecla 0-255, t È o tempo em ms qu
 	SendInput(1,&ip,sizeof(INPUT));//nesse momento envia o pacote de dados para o sistema, que falva no buffer do teclado
 	Sleep(t);
 	//Soltanto Tecla
-	//ip.ki.dwFlags=KEYEVENTF_KEYUP;//esta constante contÈm o valor padr„o para o comando de tecla solta
+	//ip.ki.dwFlags=KEYEVENTF_KEYUP;//esta constante cont√©m o valor padr√£o para o comando de tecla solta
 	//(1,&ip,sizeof(INPUT));//nesse momento envia o pacote de dados para o sistema, que falva no buffer do teclado
 	return(1);
 }
@@ -66,10 +67,10 @@ void requisicao(int delay_meio, int delay_fim){
 	printf("[OK]\n\n\n Posicione o cursor no primeiro campo de digitacao de ERP... O processo iniciara em: 5...");
 	Sleep(1000); printf("4...");Sleep(1000); printf("3...");Sleep(1000); printf("2...");Sleep(1000); printf("1...");Sleep(1000); printf("0");
 	//TAB=9
-	etapa=0;//etapa armazena o passo em que estamos. 0 È informaÁ„o do ERP. 1 quantidade.
+	etapa=0;//etapa armazena o passo em que estamos. 0 √© informa√ß√£o do ERP. 1 quantidade.
 	while(!feof(fluxo)){
 		
-		dig=getc(fluxo);//lÍ um caractere do fluxo
+		dig=getc(fluxo);//l√™ um caractere do fluxo
 		switch(dig){
 			case 9://leu um tab
 				switch(etapa){
@@ -154,9 +155,9 @@ void compra(int delay_meio, int delay_fim){
 	printf("\n\n\n Posicione o cursor no primeiro campo de digitacao de ERP... O processo iniciara em: 5...");
 	Sleep(1000); printf("4...");Sleep(1000); printf("3...");Sleep(1000); printf("2...");Sleep(1000); printf("1...");Sleep(1000); printf("0");
 	//TAB=9
-	etapa=0;//etapa armazena o passo em que estamos. 0 È informaÁ„o do ERP. 1 quantidade.
+	etapa=0;//etapa armazena o passo em que estamos. 0 √© informa√ß√£o do ERP. 1 quantidade.
 	while(!feof(fluxo)){
-		dig=getc(fluxo);//lÍ um caractere do fluxo
+		dig=getc(fluxo);//l√™ um caractere do fluxo
 		switch(dig){
 			case 9://leu um tab
 				switch(etapa){
@@ -171,7 +172,7 @@ void compra(int delay_meio, int delay_fim){
 					case 1:
 						printf("\nFinalizando solicitacao");
 						SimulaTecla(9,DELAY_ENTRE_CARACTERES);//tab
-						SimulaTecla(78,DELAY_ENTRE_CARACTERES);//n (n„o vai digitar obs)
+						SimulaTecla(78,DELAY_ENTRE_CARACTERES);//n (n√£o vai digitar obs)
 						SimulaTecla(13,DELAY_ENTRE_CARACTERES);//enter
 						SimulaTecla(27,DELAY_ENTRE_CARACTERES);//esc
 						printf(" [OK]");
@@ -195,7 +196,7 @@ void compra(int delay_meio, int delay_fim){
 					case 1:
 						printf("\nFinalizando solicitacao");
 						SimulaTecla(9,DELAY_ENTRE_CARACTERES);//tab
-						SimulaTecla(78,DELAY_ENTRE_CARACTERES);//n (n„o vai digitar obs)
+						SimulaTecla(78,DELAY_ENTRE_CARACTERES);//n (n√£o vai digitar obs)
 						SimulaTecla(13,DELAY_ENTRE_CARACTERES);//enter
 						SimulaTecla(27,DELAY_ENTRE_CARACTERES);//esc
 						SimulaTecla(13,DELAY_ENTRE_CARACTERES);//enter
