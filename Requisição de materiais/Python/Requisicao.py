@@ -38,6 +38,8 @@ def requisita_materiais_simples():
             time.sleep(1)#1s entre uma requisição e outra
             
 def solicita_compra():
+    delay_entre_requisicao = 0.1
+    delay_entre_hotkeys = 0.1
     print("ATENÇÃO: Garanta que o CMP076 seja a proxima janela do seu ALT+TAB e esteja com o cursor posicionado no campo ITEM !")
     input("Tecle ENTER quando estiver pronto: ")
     pyautogui.hotkey('alt', 'tab')
@@ -55,33 +57,33 @@ def solicita_compra():
                             print("ERP informado não tem 6 digitos")
                             return
                         pyautogui.press('tab')
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                         pyautogui.hotkey('ctrl', '1')
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                         pyautogui.press('enter')
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                         cont_erp = 0
                     elif(etapa == 1):#acabou de digitar a quantidade
                         pyautogui.press('tab') #confirma quantidade
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                         pyautogui.press('s') #entra para preencher obs tecnica
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                         pyautogui.press('tab') #entra no campo obs interna
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                     #OPCAO == 2 acaba de varrer a descrição do item
                     elif(etapa == 3):
                         pyautogui.press('enter')#confirma OBS
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                         pyautogui.press('enter')#entra na edição da data
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                         pyautogui.press('enter')#preenche data de hoje
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                         pyautogui.press('enter')#confirma quantidade todal
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                         pyautogui.hotkey('ctrl', 'enter')#confirma data e quantidade de entrega
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                         pyautogui.press('enter')#finaliza requisição
-                        time.sleep(0.1)
+                        time.sleep(delay_entre_hotkeys)
                     etapa += 1
                 else:
                     if(etapa == 0):#obtendo ERP
@@ -94,7 +96,7 @@ def solicita_compra():
                         pyautogui.press(letra)
                 if(etapa == 4):
                     break #ignora o resto da linha, caso chegue aqui
-            time.sleep(1)#1s entre uma requisição e outra
+            time.sleep(delay_entre_requisicao)#1s entre uma requisição e outra
 
 
 def mensagem_sobre():
