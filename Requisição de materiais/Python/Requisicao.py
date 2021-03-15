@@ -44,6 +44,7 @@ def requisita_materiais_avancado():
     pyautogui.hotkey('alt', 'tab')
     with open("materiais.txt", "r") as arquivo:
         for linha in arquivo:
+            print("{:.100s}".format(linha))
             etapa = 0
             temp = ""
             for letra in linha:
@@ -131,7 +132,7 @@ def solicita_compra_simples():
             time.sleep(delay_entre_requisicao)#1s entre uma requisição e outra
 
 def solicita_compra_avancado():
-    delay_entre_requisicao = 0.1
+    delay_entre_requisicao = 0.05
     delay_entre_hotkeys = 0.1
     print("ATENÇÃO: Garanta que o CMP076 seja a proxima janela do seu ALT+TAB e esteja com o cursor posicionado no campo ITEM !")
     input("Tecle ENTER quando estiver pronto: ")
@@ -139,6 +140,7 @@ def solicita_compra_avancado():
     with open("materiais.txt", "r") as arquivo:
         temp = ""
         for linha in arquivo:
+            print("{:.100s}".format(linha))
             etapa = 0
             for letra in linha:
                 if(letra == '\n' and etapa <= 2):
@@ -202,6 +204,9 @@ def mensagem_sobre():
     print(" 10/03/2021 - Delays dinâminos na parte de compra de materiais;")
     print(" 12/03/2021 - Criada nova funções de requisição e compra avançadas, em fase de testes;")
     print("            - Auto complet ERPs com menos de 6 dígicos;")
+    print(" 15/03/2021 - Impressão das linhas lidas no arquivo, nas funções avançadas;")
+    print("            - Redução dos delays da requisição;")
+    
     
     
 
