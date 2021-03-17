@@ -3,6 +3,10 @@ Esta aplicação está em desenvolvimento, e embora apresente um funcionamento s
 Atualmente disponível em duas formas de execução: Executável e em Python script.
 O codigo escrito em C++ foi descontinuado por motivos de instabilidade e limitação no acesso às entradas de teclado.
 
+Bom, primeiro note que esta aplicação trabalha em conjunto com planilhas específicas, que serão apresentadas abaixo.
+Em todos os casos, será necessária a transferência **manual** das informações da planilha para o arquivo txt que será lido pelo executável.
+Para realizar o download da aplicação visite a [pasta do projeto](https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais).
+
 # Utilização do **CMP AutoType.py**
 Para executar esta aplicação, certifique-se de possuir instalado na sua máquina o interpretador Python3, que pode ser baixado [aqui](python.org).
 Neste caso também será necessária a biblioteca **pyautogui**, que você pode instalar utilizando o pip no terminal:
@@ -16,9 +20,7 @@ ESTE PASSO A PASSO NAO FOI CONCLUIDO
 ESTE PASSO A PASSO NAO FOI CONCLUIDO
 
 # Utilização do **V4-Requisição de materiais (Executável)**
-Bom, primeiro note que esta aplicação trabalha em conjunto com planilhas específicas, que serão apresentadas abaixo.
-Em todos os casos, será necessária a transferência **manual** das informações da planilha para o arquivo txt que será lido pelo executável.
-Para realizar o download da aplicação visite a [pasta do projeto](https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais).
+**ESTA APLICAÇÃO FOI DESCONTINUADA** e pode não funcionar corretamente pois não será adaptada às atualizações e modificações do sistema. Para uma experiência completa utilize a verão em python.
 
 ## Requisição de materiais
 Utilizando a planilha **MODELO@ListaDeMateriaisEletricidade** disponibilizada como modelo para todo o grupo tramontina, deve ser criada a lista de materiais da máquina, cujos passos estão descritos na mesma.
