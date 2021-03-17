@@ -1,4 +1,17 @@
-# Utilização do **V4-Requisição de materiais**
+# O Porjeto
+Esta aplicação está em desenvolvimento, e embora apresente um funcionamento satisfatório até o momento, deve ser utilizada com cuidado para evitar requisições e solicitações de compra indesejadas.
+Atualmente disponível em duas formas de execução: Executável e em Python script.
+O codigo escrito em C++ foi descontinuado por motivos de instabilidade e limitação no acesso às entradas de teclado.
+
+# Utilização do **Requizição.py**
+Para executar esta aplicação, certifique-se de possuir instalado na sua máquina o interpretador Python3, que pode ser baixado [aqui](python.org).
+Neste caso também será necessária a biblioteca **pyautogui**, que você pode instalar utilizando o pip no terminal:
+
+> pip install pyautogui
+
+ESTE PASSO A PASSO NAO FOI CONCLUIDO
+
+# Utilização do **V4-Requisição de materiais (Executável)**
 Bom, primeiro note que esta aplicação trabalha em conjunto com planilhas específicas, que serão apresentadas abaixo.
 Em todos os casos, será necessária a transferência **manual** das informações da planilha para o arquivo txt que será lido pelo executável.
 Para realizar o download da aplicação visite a [pasta do projeto](https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais).
