@@ -1,4 +1,4 @@
-# O Porjeto
+# O Projeto
 Esta aplicação está em desenvolvimento, e embora apresente um funcionamento satisfatório até o momento, deve ser utilizada com cuidado para evitar requisições e solicitações de compra indesejadas.
 Atualmente disponível em duas formas de execução: Executável e em Python script.
 O codigo escrito em C++ foi descontinuado por motivos de instabilidade e limitação no acesso às entradas de teclado.
