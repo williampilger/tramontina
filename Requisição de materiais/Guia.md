@@ -32,17 +32,15 @@ ESTE PASSO A PASSO NAO FOI CONCLUIDO
 Utilizando a planilha **MODELO@ListaDeCompras** disponibilizada como modelo para todo o grupo tramontina, deve ser criada a lista de materiais para compra, cujos passos estão descritos na mesma.
 Em seguinda, com a lista pronta, para gerar a soliticação de compra siga os paços abaixo:
 - Na guia **ENCAMINHAR** copie o conteúdo da lista **excluindo o cabeçalho**, e cole-o em um arquivo nomeado como **Materiais.txt** (inclusive, um exemplo acompanha o executável aqui no GitHub). Salve as alterações;
-- Abra o executável, e dê atenção aos avisos escritos. A interface texto é extremamente simples, e pode dificultar a visualização de erros;
-- Tecle **2** para selecionar a opção **Solicitação de compra**;
+- Execute o script **CMP AutoType.py**, e dê atenção aos avisos escritos. A interface texto é extremamente simples, e pode dificultar a visualização de erros;
+- Tecle **2** para selecionar a opção **Solicitação de compra**, tecle enter;
 - Abra o sistema Tramontina e execute o **cmp076**;
 - Confirme a utilização das referências do fornecedor clicando em **Sim**;
 - Clique em **Incluir** para criar uma nova solicitação de compra;
 - Selecione o tipo de compra **Compra normal**;
 - Informe o repreg do solicitante e comprador;
-- Com o cursor já posicionado na célula do primeiro ítem, volte ao executavel;
-- Pressione qualquer tecla para iniciar o tempo de espera;
-- Retorne ao cmp076 deixando o cursor na primira célula. Seja rápido;
-- Aguarde o início e término da digitação.
+- Com o cursor já posicionado na célula do primeiro ítem, volte ao terminal python;
+- Pressione enter para iniciar o processo.
 **OBS: Caso algum dos itens listados já tenha solicitação de compra, toda a operação falhará (e a chance não é das menores, então atenção) pois o programa não recebe nenhum feedback do sistema, apenas dispara teclas no teclado.**
 
 **IMPORTANTE NOTAR QUE DURANTE OS PROCESSOS VOCÊ NÃO PODERÁ USAR O COMPUTADOR PARA OUTRA ATIVIDADE, POIS O EXECUTÁVEL SIMULA A DIGITAÇÃO NO TECLADO. PARA INTERROMPER O PROCESSO FECHE O PROGRAMA!**
