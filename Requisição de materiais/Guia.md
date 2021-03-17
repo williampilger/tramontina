@@ -16,6 +16,7 @@ ESTE PASSO A PASSO NAO FOI CONCLUIDO
 ESTE PASSO A PASSO NAO FOI CONCLUIDO
 
 # Utilização do **V4-Requisição de materiais (Executável)**
+**ESTA APLICAÇÃO FOI DESCONTINUADA**
 Bom, primeiro note que esta aplicação trabalha em conjunto com planilhas específicas, que serão apresentadas abaixo.
 Em todos os casos, será necessária a transferência **manual** das informações da planilha para o arquivo txt que será lido pelo executável.
 Para realizar o download da aplicação visite a [pasta do projeto](https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais).
