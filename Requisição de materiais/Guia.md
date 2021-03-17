@@ -1,7 +1,6 @@
 # O Projeto
 Esta aplicação está em desenvolvimento, e embora apresente um funcionamento satisfatório até o momento, deve ser utilizada com cuidado para evitar requisições e solicitações de compra indesejadas.
-Atualmente disponível em duas formas de execução: Executável e em Python script.
-O codigo escrito em C++ foi descontinuado por motivos de instabilidade e limitação no acesso às entradas de teclado.
+Inicialmente o projeto foi construido em C++, mas por motivos de instabilidade e limitação no acesso às entradas de teclado foi transcrito para python.
 
 Bom, primeiro note que esta aplicação trabalha em conjunto com planilhas específicas, que serão apresentadas abaixo.
 Em todos os casos, será necessária a transferência **manual** das informações da planilha para o arquivo txt que será lido pelo executável.
@@ -14,32 +13,23 @@ Neste caso também será necessária a biblioteca **pyautogui**, que você pode 
 > pip install pyautogui
 
 ## Requisição de materiais (cmp072)
-ESTE PASSO A PASSO NAO FOI CONCLUIDO
+Utilizando a planilha **MODELO@ListaDeMateriaisEletricidade** disponibilizada como modelo para todo o grupo tramontina, deve ser criada a lista de materiais da máquina, cujos passos estão descritos na mesma.
+Em seguinda, com a lista pronta, e estoque atuaizado, para a requisição siga os paços abaixo:
+- Na guia **LISTA_REQUISICAO** copie todo o conteúdo da área identificada como **Requisitar** e cole-o em um arquivo nomeado como **Materiais.txt** (inclusive, um exemplo acompanha o executável aqui no GitHub). Salve as alterações;
+- execute o script **CMP AutoType.py***, e dê atenção aos avisos escritos. A interface texto é extremamente simples, e pode dificultar a visualização de erros;
+- Tecle **1** para selecionar a opção **Requisição de materiais**, confirme com enter;
+- Abra o sistema Tramontina e execute o **cmp072**, preencha os dados iniciais, até a etapa em que você iniciaria a escrita do primeiro ERP;
+- Digite a seção de destino, tecle enter;
+
+**IMPORTANTE** - Como já descrito na aplicação, o programa dará um "Alt+Tab" e iniciará a digitação do conteúdo, então garanta que o CMP072 seja a ultima janela em que você esteve antes de voltar à aplicação.
+
+**IMPORTANTE 2** - Tenha certeza de que o estoque atual esteja atualizado na planilha antes de iniciar a requisição, pois é ela que garante que não haja tentativa de requisição de materiais sem estoque. Se isto ocorrer, a operação toda falhará.
+
 
 ## Solicitação de compras (cmp076)
 ESTE PASSO A PASSO NAO FOI CONCLUIDO
 
-# Utilização do **V4-Requisição de materiais (Executável)**
-**ESTA APLICAÇÃO FOI DESCONTINUADA** e pode não funcionar corretamente pois não será adaptada às atualizações e modificações do sistema. Para uma experiência completa utilize a verão em python.
-
-## Requisição de materiais
-Utilizando a planilha **MODELO@ListaDeMateriaisEletricidade** disponibilizada como modelo para todo o grupo tramontina, deve ser criada a lista de materiais da máquina, cujos passos estão descritos na mesma.
-Em seguinda, com a lista pronta, e estoque atuaizado, para a requisição siga os paços abaixo:
-- Na guia **LISTA_REQUISICAO** copie todo o conteúdo da área identificada como **Requisitar** e cole-o em um arquivo nomeado como **Materiais.txt** (inclusive, um exemplo acompanha o executável aqui no GitHub). Salve as alterações;
-- Abra o executável, e dê atenção aos avisos escritos. A interface texto é extremamente simples, e pode dificultar a visualização de erros;
-- Tecle **1** para selecionar a opção **Requisição de materiais**;
-- Tecle **S**, confirmando que irá digitar a seção de destino;
-- Digite a seção de destino **USANDO TRÊS DÍGITOS**, tecle enter;
-- Abra o sistema Tramontina e execute o **cmp072**, preencha os dados iniciais, até a etapa em que você iniciaria a escrita do primeiro ERP;
-- Volte ao executavel, e pressione qualquer tecla para continuar o processo.
-- Volte ao cmp072, deixando o cursor posicionado no campo para preenchimento do ERP.
-
-Importante: No momento em que você confirma a sequência (ultimo passo) e volta para o sistema, SEJA RÁPIDO, pois o programa começa a disparar as teclas independentemente do posicionamento do cursor.
-Importante 2: Tenha certeza de que o estoque atual esteja atualizado na planilha antes de iniciar a requisição, pois é ela que garante que não haja tentativa de requisição de materiais sem estoque. Se isto ocorrer, a operação toda falhará.
-
-## Solicitação de compra
-Utilizando a planilha **MODELO@ListaDeComprasEletricidade** disponibilizada como modelo para todo o grupo tramontina, deve ser criada a lista de materiais para compra, cujos passos estão descritos na mesma.
-**OBS.: após a última atualização do sistema tramontina, a data precisará ser preenchida manualmente, programa ainda não adequado.**
+Utilizando a planilha **MODELO@ListaDeCompras** disponibilizada como modelo para todo o grupo tramontina, deve ser criada a lista de materiais para compra, cujos passos estão descritos na mesma.
 Em seguinda, com a lista pronta, para gerar a soliticação de compra siga os paços abaixo:
 - Na guia **ENCAMINHAR** copie o conteúdo da lista **excluindo o cabeçalho**, e cole-o em um arquivo nomeado como **Materiais.txt** (inclusive, um exemplo acompanha o executável aqui no GitHub). Salve as alterações;
 - Abra o executável, e dê atenção aos avisos escritos. A interface texto é extremamente simples, e pode dificultar a visualização de erros;
