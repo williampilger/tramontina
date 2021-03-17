@@ -3,12 +3,16 @@ Esta aplicação está em desenvolvimento, e embora apresente um funcionamento s
 Atualmente disponível em duas formas de execução: Executável e em Python script.
 O codigo escrito em C++ foi descontinuado por motivos de instabilidade e limitação no acesso às entradas de teclado.
 
-# Utilização do **Requizição.py**
+# Utilização do **CMP AutoType.py**
 Para executar esta aplicação, certifique-se de possuir instalado na sua máquina o interpretador Python3, que pode ser baixado [aqui](python.org).
 Neste caso também será necessária a biblioteca **pyautogui**, que você pode instalar utilizando o pip no terminal:
 
 > pip install pyautogui
 
+## Requisição de materiais (cmp072)
+ESTE PASSO A PASSO NAO FOI CONCLUIDO
+
+## Solicitação de compras (cmp076)
 ESTE PASSO A PASSO NAO FOI CONCLUIDO
 
 # Utilização do **V4-Requisição de materiais (Executável)**
