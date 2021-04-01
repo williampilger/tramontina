@@ -136,7 +136,7 @@ def solicita_compra_avancado():
 
 
 def mensagem_sobre():
-    print("Versão V3.0")
+    print("Versão V3.1")
     print("\n Desenvolvido por William Pilger")
     print("\n\n Historico de alterações:")
     print(" 10/03/2021 - Delays dinâminos na parte de compra de materiais;")
@@ -147,7 +147,7 @@ def mensagem_sobre():
     print(" 17/03/2021 - Remoção das funções antigas de digitação")
     print(" 26/03/2021 - Adicionada função de busca automática das janelas")
     print("            - Funcionalidade que para a execução se a janela for trocada")
-    
+    print(" 29/03/2021 - Função para localizar janela alterada [recução de código]")
     
 
 
