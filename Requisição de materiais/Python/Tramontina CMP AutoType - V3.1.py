@@ -7,10 +7,10 @@ def busca_janela(chave_janela, tentativas):
     #Retorna True se encontrou, e False se não
     for x in range(tentativas): #Teste as 6 proximas janelas
         pyautogui.keyDown('alt')
-        for y in range(x):
+        for y in range(1,x):
             pyautogui.press('tab')
         pyautogui.keyUp('alt')
-        if nome_janela_deve_conter in GetWindowText(GetForegroundWindow()):
+        if chave_janela in GetWindowText(GetForegroundWindow()):
             return True
     return False
 
