@@ -2,7 +2,7 @@
 Este script foi escrito para facilitar a digitação de requisições de materiais e solicitações de compras e, embora apresente um funcionamento satisfatório até o momento, deve ser utilizada com cuidado para evitar requisições e solicitações de compra indesejadas.
 Inicialmente o projeto foi construido em C++, mas por motivos de instabilidade e limitação no acesso às entradas de teclado foi transcrito para python.
 
-O código não foi otimisado, e certamente pode ter várias melhorias. Sinta-se a vontade para contribuir. 
+O código não foi otimizado, e certamente pode ter várias melhorias. Sinta-se a vontade para contribuir. 
 
 Note que esta aplicação trabalha em conjunto com planilhas específicas, que serão apresentadas abaixo.
 Em todos os casos, será necessária a transferência **manual** das informações da planilha para o arquivo txt que será lido pelo executável.
