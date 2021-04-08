@@ -11,6 +11,7 @@ Para executar esta aplicação, certifique-se de possuir instalado na sua máqui
 Neste caso também serão necessarias as bibliotecas **pyautogui** e **win32gui**, que você pode instalar utilizando o pip no terminal:
 
 > pip install pyautogui
+
 > pip install pywin32
 
 ## Requisição de materiais (cmp072)
