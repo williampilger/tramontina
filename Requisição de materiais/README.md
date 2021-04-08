@@ -7,12 +7,14 @@ Em todos os casos, será necessária a transferência **manual** das informaçõ
 Para realizar o download da aplicação visite a [pasta do projeto](https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais).
 
 # Utilização do **CMP AutoType.py**
-Para executar esta aplicação, certifique-se de possuir instalado na sua máquina o interpretador Python3, que pode ser baixado [aqui](python.org).
+Para executar esta aplicação utilizando o interpretador python, certifique-se de possuir instalado na sua máquina o Python3, que pode ser baixado [aqui](python.org).
 Neste caso também serão necessarias as bibliotecas **pyautogui** e **win32gui**, que você pode instalar utilizando o pip no terminal:
 
 > pip install pyautogui
 
 > pip install pywin32
+
+Caso opte por utilizar o executável (testado apenas no Windows 10), não será necessária nenhuma instalação, porém a aplicação pode não funcionar exatamente como o esperado.
 
 ## Requisição de materiais (cmp072)
 Utilizando a planilha **MODELO@ListaDeMateriaisEletricidade** disponibilizada como modelo para todo o grupo tramontina, deve ser criada a lista de materiais da máquina, cujos passos estão descritos na mesma.
