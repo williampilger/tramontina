@@ -1,8 +1,10 @@
 # O Projeto
-Esta aplicação está em desenvolvimento, e embora apresente um funcionamento satisfatório até o momento, deve ser utilizada com cuidado para evitar requisições e solicitações de compra indesejadas.
+Este script foi escrito para facilitar a digitação de requisições de materiais e solicitações de compras e, embora apresente um funcionamento satisfatório até o momento, deve ser utilizada com cuidado para evitar requisições e solicitações de compra indesejadas.
 Inicialmente o projeto foi construido em C++, mas por motivos de instabilidade e limitação no acesso às entradas de teclado foi transcrito para python.
 
-Bom, primeiro note que esta aplicação trabalha em conjunto com planilhas específicas, que serão apresentadas abaixo.
+O código não foi otimisado, e certamente pode ter várias melhorias. Sinta-se a vontade para contribuir. 
+
+Note que esta aplicação trabalha em conjunto com planilhas específicas, que serão apresentadas abaixo.
 Em todos os casos, será necessária a transferência **manual** das informações da planilha para o arquivo txt que será lido pelo executável.
 Para realizar o download da aplicação visite a [pasta do projeto](https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais).
 
