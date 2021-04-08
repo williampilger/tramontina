@@ -8,9 +8,10 @@ Para realizar o download da aplicação visite a [pasta do projeto](https://gith
 
 # Utilização do **CMP AutoType.py**
 Para executar esta aplicação, certifique-se de possuir instalado na sua máquina o interpretador Python3, que pode ser baixado [aqui](python.org).
-Neste caso também será necessária a biblioteca **pyautogui**, que você pode instalar utilizando o pip no terminal:
+Neste caso também serão necessarias as bibliotecas **pyautogui** e **win32gui**, que você pode instalar utilizando o pip no terminal:
 
 > pip install pyautogui
+> pip install pywin32
 
 ## Requisição de materiais (cmp072)
 Utilizando a planilha **MODELO@ListaDeMateriaisEletricidade** disponibilizada como modelo para todo o grupo tramontina, deve ser criada a lista de materiais da máquina, cujos passos estão descritos na mesma.
