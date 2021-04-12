@@ -35,7 +35,6 @@ Em seguinda, com a lista pronta, e estoque atuaizado, para a requisição siga o
 
 
 ## Solicitação de compras (cmp076)
-ESTE PASSO A PASSO NAO FOI CONCLUIDO
 
 Utilizando a planilha **MODELO@ListaDeCompras** disponibilizada como modelo para todo o grupo tramontina, deve ser criada a lista de materiais para compra, cujos passos estão descritos na mesma.
 Em seguinda, com a lista pronta, para gerar a soliticação de compra siga os paços abaixo:
