@@ -1,6 +1,6 @@
 # Atualizando as bases de dados das planilhas de estoque
 
-Abaixo você encontrará os passo-a-passos para atualizar manualmente os dados de **@EstoqueAtual** e **@SolicCompra**.
+Abaixo você encontrará os passo-a-passos para atualizar manualmente os dados de **@EstoqueAtual** e **@SolicCompras**.
 
 ## Atualizando @EstoqueAtual
 Esta planilha contém o nível de estoque de todos os itens no estoque da empresa.
