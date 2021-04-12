@@ -29,7 +29,7 @@ Esta planilha armazena as últimas solicitações de compra. As mais antigas é 
 - Selecione todo o conteúdo. Faça isso clicando em qualquer célula da área de dados, e pressione **Crtl+T**;
 - Abra o bloco de notas (notepad.exe, padrão do windows), e cole o conteúdo lá;
 - No menu **Editar** você encontrará a função **Substituir**, clique nela;
-- No campo **Localizar** preencha com ´="´, e deixe o campo **Substituir por** em branco;
+- No campo **Localizar** preencha com '="', e deixe o campo **Substituir por** em branco;
 - Clique em **Substituir tudo**, e feche a janela;
 - Selecione todo o conteúdo novamente, usando **Ctrl+A** e copie para a área de tranferência, usando **Ctrl+C**; 
 - Abra a planilha de dados **@SolicCompras** (aquela que você usa como base de consulta para as demais planilhas, de compras e requisição);
