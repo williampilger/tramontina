@@ -210,7 +210,7 @@ def mensagem_sobre():
     return
 
 def ajuda():
-    webbrowser.openurl("https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais")
+    webbrowser.urlopen("https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais")
     return
   
 def inicio():
