@@ -1,18 +1,18 @@
 import os
 from datetime import datetime
 import time
-from webbrowser import openurl #paga abrir página de ajuda
+import webbrowser #paga abrir página de ajuda
 try:
   from win32gui import GetWindowText, GetForegroundWindow #para instalar use >>> pip install pywin32
 except:
-  print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\N(CONEXÃO COM INTERNET NECESSÁRIA)")
+  print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\n(CONEXÃO COM INTERNET NECESSÁRIA)")
   os.system("pip install pywin32")
   time.sleep(1)#Aguarda para importar a biblioteca
   from win32gui import GetWindowText, GetForegroundWindow
 try:
   import pyautogui # para instalar use >>> pip install pyautogui
 except:
-  print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\N(CONEXÃO COM INTERNET NECESSÁRIA)")
+  print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\n(CONEXÃO COM INTERNET NECESSÁRIA)")
   os.system("pip install pyautogui")
   time.sleep(1)#Aguarda para importar a biblioteca
   import pyautogui
@@ -207,7 +207,7 @@ def mensagem_sobre():
     return
 
 def ajuda():
-    openurl("https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais")
+    webbrowser.openurl("https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais")
     return
   
 def inicio():
