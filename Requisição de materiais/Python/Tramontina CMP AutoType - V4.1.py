@@ -4,12 +4,16 @@ import time
 try:
   from win32gui import GetWindowText, GetForegroundWindow #para instalar use >>> pip install pywin32
 except:
+  print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\N(CONEXÃO COM INTERNET NECESSÁRIA)")
   os.system("pip install pywin32")
+  time.sleep(1)#Aguarda para importar a biblioteca
   from win32gui import GetWindowText, GetForegroundWindow
 try:
   import pyautogui # para instalar use >>> pip install pyautogui
 except:
+  print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\N(CONEXÃO COM INTERNET NECESSÁRIA)")
   os.system("pip install pyautogui")
+  time.sleep(1)#Aguarda para importar a biblioteca
   import pyautogui
 
 def busca_janela(chave_janela, tentativas):
@@ -196,8 +200,10 @@ def mensagem_sobre():
     print("            - Funcionalidade que para a execução se a janela for trocada")
     print(" 29/03/2021 - Função para localizar janela alterada [recução de código]")
     print(" 07/04/2021 - Função para tratar ERPs errados e materiais sem estoque no cmp072")
-    
-
+    print(" 16/04/2021 - Função para baixar automaticamente bibliotecas por ventura não instaladas")
+    print("            - Loop na tela inicial")
+    print("            - Tela de ajuda implementada")
+    return
 
 def inicio():
     print("Tramontina S.A. Cutelaria\n\n\nBy: William Pilger")
