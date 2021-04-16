@@ -1,6 +1,7 @@
 import os
 from datetime import datetime
 import time
+from webbrowser import openurl #paga abrir página de ajuda
 try:
   from win32gui import GetWindowText, GetForegroundWindow #para instalar use >>> pip install pywin32
 except:
@@ -206,7 +207,8 @@ def mensagem_sobre():
     return
 
 def ajuda():
-    
+    openurl("https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais")
+    return
   
 def inicio():
     while True:
