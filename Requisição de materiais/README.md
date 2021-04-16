@@ -8,9 +8,9 @@ Note que esta aplicação trabalha em conjunto com planilhas específicas, que s
 Em todos os casos, será necessária a transferência **manual** das informações da planilha para o arquivo txt que será lido pelo executável.
 
 ## Download da aplicação
-- Baixe o [Codigo Fonte](https://github.com/williampilger/tramontina/raw/master/Requisi%C3%A7%C3%A3o%20de%20materiais/Python/Tramontina%20CMP%20AutoType%20-%20V4.0.py)
-- Baixe o [Executável para Windows 10](https://github.com/williampilger/tramontina/raw/master/Requisi%C3%A7%C3%A3o%20de%20materiais/Python/Tramontina%20CMP%20AutoType%20-%20V4.0.exe)
-- Baixe o [Executável para Windows 7](https://github.com/williampilger/tramontina/raw/master/Requisi%C3%A7%C3%A3o%20de%20materiais/Python/Tramontina%20CMP%20AutoType%20-%20V4.0%20(WIN%207)%20.exe)
+- Baixe o [Codigo Fonte](https://github.com/williampilger/tramontina/raw/master/Requisi%C3%A7%C3%A3o%20de%20materiais/Python/Tramontina%20CMP%20AutoType%20-%20V4.1.py)
+- Baixe o [Executável para Windows 10](https://github.com/williampilger/tramontina/raw/master/Requisi%C3%A7%C3%A3o%20de%20materiais/Python/Tramontina%20CMP%20AutoType%20-%20V4.1.exe)
+- Baixe o [Executável para Windows 7](https://github.com/williampilger/tramontina/raw/master/Requisi%C3%A7%C3%A3o%20de%20materiais/Python/Tramontina%20CMP%20AutoType%20-%20V4.1%20(WIN%207).exe)
 - Ou visite a [pasta do projeto](https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais).
 
 Você encontra os passo-a-passo para atualizar os dados das planilhas do banco de dados [aqui](https://github.com/williampilger/tramontina/blob/master/Requisi%C3%A7%C3%A3o%20de%20materiais/Atualizar%20planilhas%20de%20estoque%20e%20solicita%C3%A7%C3%B5es%20de%20compras.md).
