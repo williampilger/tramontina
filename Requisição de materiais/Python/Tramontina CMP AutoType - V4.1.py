@@ -205,18 +205,26 @@ def mensagem_sobre():
     print("            - Tela de ajuda implementada")
     return
 
+def ajuda():
+    
+  
 def inicio():
-    print("Tramontina S.A. Cutelaria\n\n\nBy: William Pilger")
-    print("Escolha uma das opções abaixo:\n    (1) Requisição de materiais\n    (2) Solicitação de compras\n\n    (0) Sobre este script\n\n")
-    opcao = int(input("Sua opção: "))
-    if (opcao == 0):
-        mensagem_sobre()
-    elif (opcao == 1):
-        requisita_materiais_avancado()
-    elif (opcao == 2):
-        solicita_compra_avancado()
-    else:
-        print("Opção inválida!")
+    while True:
+        print("Tramontina S.A. Cutelaria\n\n\nBy: William Pilger")
+        print("Escolha uma das opções abaixo:\n    (1) Requisição de materiais\n    (2) Solicitação de compras\n\n    (9) Ajuda\n\n    (0) Sobre este script\n\n")
+        opcao = int(input("Sua opção: "))
+        if (opcao == 0):
+            mensagem_sobre()
+        elif (opcao == 1):
+            requisita_materiais_avancado()
+            return #sair da aplicação
+        elif (opcao == 2):
+            solicita_compra_avancado()
+            return #sair da aplicação
+        elif (opcao == 9):
+            ajuda()
+        else:
+            print("Opção inválida!")
 
 if (__name__ == "__main__"):
     inicio()
