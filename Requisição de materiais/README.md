@@ -23,7 +23,7 @@ Neste caso também serão necessarias as bibliotecas **pyautogui** e **win32gui*
 
 > pip install pywin32
 
-Caso opte por utilizar o executável (testado apenas no Windows 10), não será necessária nenhuma instalação, porém a aplicação pode não funcionar exatamente como o esperado.
+Caso opte por utilizar o executável, não será necessária nenhuma instalação.
 
 ## Requisição de materiais (cmp072)
 Utilizando a planilha **MODELO@ListaDeMateriaisEletricidade** disponibilizada como modelo para todo o grupo tramontina, deve ser criada a lista de materiais da máquina, cujos passos estão descritos na mesma.
