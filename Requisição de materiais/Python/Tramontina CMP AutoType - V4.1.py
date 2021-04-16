@@ -1,4 +1,9 @@
 import os
+import sys
+def restart_program():
+    python = sys.executable
+    os.execl(python, python, * sys.argv)
+    
 from datetime import datetime
 import time
 import webbrowser #paga abrir página de ajuda
@@ -7,15 +12,13 @@ try:
 except:
   print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\n(CONEXÃO COM INTERNET NECESSÁRIA)")
   os.system("pip install pywin32")
-  time.sleep(1)#Aguarda para importar a biblioteca
-  from win32gui import GetWindowText, GetForegroundWindow
+  restart_program()
 try:
   import pyautogui # para instalar use >>> pip install pyautogui
 except:
   print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\n(CONEXÃO COM INTERNET NECESSÁRIA)")
   os.system("pip install pyautogui")
-  time.sleep(1)#Aguarda para importar a biblioteca
-  import pyautogui
+  restart_program()
 
 def busca_janela(chave_janela, tentativas):
     #Recebe a string chave, e o número de tentativas de alt+tab deve-se tentar
