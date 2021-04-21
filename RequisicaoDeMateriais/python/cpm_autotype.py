@@ -253,7 +253,7 @@ def inicio():
                       %&@    &&#         &&@    &&&                             
                    &&&&*    &&&.     /&&&&     .&&&                             
                           &&&&(               &&&&""")
-            print("Pau no cú do Flavio!!!")
+            print("Pau no cú do Raposão!!!")
             input()
             return
         else:
