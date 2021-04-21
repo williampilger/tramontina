@@ -114,6 +114,7 @@ def requisita_materiais_avancado():
 def solicita_compra_avancado():
     nome_janela_deve_conter = "cmp076" #variável que armazena o nime da janela que deve ser procurada
     delay_entre_requisicao = 0.05
+    delay_aguarda_erro = 0.05 #delay para aguardar mensagem de erro em alguma etapa da requisicao
     delay_entre_hotkeys = 0.1
     print(f'Esteja com o {nome_janela_deve_conter} aberto e com o cursor no campo para digitar o primeiro ERP')
     input("Tecle ENTER quando estiver pronto: ")
@@ -229,6 +230,10 @@ def inicio():
             ajuda()
         elif (opcao == 8):
             return #sair
+        elif (opcao == 69):
+            print("Pau no cú do Flavio!!!")
+            input()
+            return
         else:
             print("Opção inválida!")
 
