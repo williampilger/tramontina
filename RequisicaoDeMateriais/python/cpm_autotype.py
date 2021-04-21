@@ -215,7 +215,7 @@ def ajuda():
 def inicio():
     while True:
         print("Tramontina S.A. Cutelaria\n\n\nBy: William Pilger")
-        print("Escolha uma das opções abaixo:\n    (1) Requisição de materiais\n    (2) Solicitação de compras\n\n    (9) Ajuda\n\n    (0) Sobre este script\n\n")
+        print("Escolha uma das opções abaixo:\n    (1) Requisição de materiais\n    (2) Solicitação de compras\n\n    (8) Sair\n    (9) Ajuda\n    (0) Sobre este script\n\n")
         opcao = int(input("Sua opção: "))
         if (opcao == 0):
             mensagem_sobre()
@@ -227,6 +227,8 @@ def inicio():
             return #sair da aplicação
         elif (opcao == 9):
             ajuda()
+        elif (opcao == 8):
+            return #sair
         else:
             print("Opção inválida!")
 

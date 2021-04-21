@@ -21,8 +21,10 @@ def baixa_arquivo(url, destino):
         arquivo.write(dados.content)
 
 def main():
+    os.system("attrib -h cache") #oculta o arquivo
     programa = baixa_arquivo("https://raw.githubusercontent.com/williampilger/tramontina/master/RequisicaoDeMateriais/python/cpm_autotype.py", "cache")
-    os.system(f"python cache")
+    os.system("attrib +h cache") #oculta o arquivo
+    os.system("python cache")
     quit()
 
 if __name__ == "__main__":
