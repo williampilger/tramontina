@@ -8,20 +8,21 @@ Note que esta aplicação trabalha em conjunto com planilhas específicas, que s
 Em todos os casos, será necessária a transferência **manual** das informações da planilha para o arquivo txt que será lido pelo executável.
 
 ## Download da aplicação
+Para executar a aplicação, certifique-se de ter instalada a versão mais recente do Python. Que você pode obter no [Site oficial](python.org)
+
 - Baixe o [Codigo Fonte](https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/chamador_principal.py) - SUGERIDO
 - Baixe o [Executável para Windows 10](https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/old_versions/tramontina_cpm_autotype-v4.1.exe) - [DESCONTINUADO]
 - Baixe o [Executável para Windows 7](https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/old_versions/tramontina_cpm_autotype-v4.1_win7.exe) - [DESCONTINUADO]
 - Ou visite a [pasta do projeto](https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais).
 
-Você encontra os passo-a-passo para atualizar os dados das planilhas do banco de dados [aqui](https://github.com/williampilger/tramontina/blob/master/Requisi%C3%A7%C3%A3o%20de%20materiais/Atualizar%20planilhas%20de%20estoque%20e%20solicita%C3%A7%C3%B5es%20de%20compras.md).
+Você encontra os passo-a-passo para atualizar os dados das planilhas do banco de dados [aqui](https://github.com/williampilger/tramontina/blob/master/RequisicaoDeMateriais/README.md).
 
 # Utilização do **CMP AutoType.py**
 Para executar esta aplicação utilizando o interpretador python, certifique-se de possuir instalado na sua máquina o Python3, que pode ser baixado [aqui](python.org).
-Neste caso também serão necessarias as bibliotecas **pyautogui** e **win32gui**, que você pode instalar utilizando o pip no terminal:
+Neste caso também serão necessarias algumas bibliotecas. A maior parte delas será instalada automaticamente na primeira execução, com exceção da **python-certifi-win32**, que você pode instalar utilizando o pip no terminal (cmd):
 
-> pip install pyautogui
+> pip install python-certifi-win32
 
-> pip install pywin32
 
 Caso opte por utilizar o executável, não será necessária nenhuma instalação.
 
