@@ -1,0 +1,26 @@
+Versão V5.1
+
+ Desenvolvido por William Pilger
+
+
+ Historico de alterações:
+ 10/03/2021 - Delays dinâminos na parte de compra de materiais;
+ 12/03/2021 - Criada nova funções de requisição e compra avançadas, em fase de testes;
+            - Auto complet ERPs com menos de 6 dígicos;
+ 15/03/2021 - Impressão das linhas lidas no arquivo, nas funções avançadas;
+            - Redução dos delays da requisição;
+ 17/03/2021 - Remoção das funções antigas de digitação
+ 26/03/2021 - Adicionada função de busca automática das janelas
+            - Funcionalidade que para a execução se a janela for trocada
+ 29/03/2021 - Função para localizar janela alterada [recução de código]
+ 07/04/2021 - Função para tratar ERPs errados e materiais sem estoque no cmp072
+ 16/04/2021 - Função para baixar automaticamente bibliotecas por ventura não instaladas
+            - Loop na tela inicial
+            - Tela de ajuda implementada
+ 21/04/2021 - Implementado chamador princilap
+            - Função de download automático de mais bibliotecas possivelmente necessárias
+ 22/04/2021 - Correção de bugs da atualização automática
+            - Adicionada função para executar código em cache caso não haja internet
+            - Tratamento de erros relacionados à falha de comunicação do github
+
+                          By: William Pilger
