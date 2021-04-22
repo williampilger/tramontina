@@ -11,7 +11,7 @@ Para atualizar os dados das planilhas, visite [Atualizar planilhas de estoque e 
 ## Download da aplicação
 Para executar a aplicação, certifique-se de ter instalada a versão mais recente do Python. Que você pode obter no [Site oficial](python.org)
 
-- Baixe o [Codigo Fonte](https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/chamador_principal.py) - SUGERIDO
+- Baixe o [Codigo Fonte](https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/chamador_principal.py) (Use Ctrl+S para salvar) - SUGERIDO
 - Baixe o [Executável para Windows 10](https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/old_versions/tramontina_cpm_autotype-v4.1.exe) - [DESCONTINUADO]
 - Baixe o [Executável para Windows 7](https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/old_versions/tramontina_cpm_autotype-v4.1_win7.exe) - [DESCONTINUADO]
 - Ou visite a [pasta do projeto](https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais).
