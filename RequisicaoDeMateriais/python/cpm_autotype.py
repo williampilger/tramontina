@@ -194,7 +194,7 @@ def mensagem_sobre():
     return
 
 def ajuda():
-    webbrowser.open("https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/sobreoscript.txt")
+    webbrowser.open("https://github.com/williampilger/tramontina/blob/master/RequisicaoDeMateriais/README.md")
     return
 
 def easteregg_1():
