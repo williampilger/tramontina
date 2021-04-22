@@ -189,35 +189,15 @@ def solicita_compra_avancado():
                     break #ignora o resto da linha, caso chegue aqui
             time.sleep(delay_entre_requisicao)#1s entre uma requisição e outra
 
-
 def mensagem_sobre():
-    print("Versão V5.1")
-    print("\n Desenvolvido por William Pilger")
-    print("\n\n Historico de alterações:")
-    print(" 10/03/2021 - Delays dinâminos na parte de compra de materiais;")
-    print(" 12/03/2021 - Criada nova funções de requisição e compra avançadas, em fase de testes;")
-    print("            - Auto complet ERPs com menos de 6 dígicos;")
-    print(" 15/03/2021 - Impressão das linhas lidas no arquivo, nas funções avançadas;")
-    print("            - Redução dos delays da requisição;")
-    print(" 17/03/2021 - Remoção das funções antigas de digitação")
-    print(" 26/03/2021 - Adicionada função de busca automática das janelas")
-    print("            - Funcionalidade que para a execução se a janela for trocada")
-    print(" 29/03/2021 - Função para localizar janela alterada [recução de código]")
-    print(" 07/04/2021 - Função para tratar ERPs errados e materiais sem estoque no cmp072")
-    print(" 16/04/2021 - Função para baixar automaticamente bibliotecas por ventura não instaladas")
-    print("            - Loop na tela inicial")
-    print("            - Tela de ajuda implementada")
-    print(" 21/04/2021 - Implementado chamador princilap")
-    print("            - Função de download automático de mais bibliotecas possivelmente necessárias")
-    print(" 22/04/2021 - Correção de bugs da atualização automática")
-    print("            - Adicionada função para executar código em cache caso não haja internet")
-    print("            - Tratamento de erros relacionados à falha de comunicação do github")
-    print("\n                          By: William Pilger\n")
+    import requests #isso deve estar instalado, se a pessoa usou o chamador_principal.py
+    dados = requests.get("https://github.com/williampilger/tramontina/blob/master/RequisicaoDeMateriais/python/sobreoscript.txt")#faz download do arquivo
+    print(dados)
     os.system("pause")
     return
 
 def ajuda():
-    webbrowser.open("https://github.com/williampilger/tramontina/blob/master/RequisicaoDeMateriais/README.md")
+    webbrowser.open("https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/sobreoscript.txt")
     return
 
 def easteregg_1():
