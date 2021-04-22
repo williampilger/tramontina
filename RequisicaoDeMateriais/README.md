@@ -6,6 +6,7 @@ O código não foi otimizado, e certamente pode ter várias melhorias. Sinta-se 
 
 Note que esta aplicação trabalha em conjunto com planilhas específicas, que serão apresentadas abaixo.
 Em todos os casos, será necessária a transferência **manual** das informações da planilha para o arquivo txt que será lido pelo executável.
+Para atualizar os dados das planilhas, visite [Atualizar planilhas de estoque e solicitações de compras](https://github.com/williampilger/tramontina/blob/master/RequisicaoDeMateriais/atualizar_planilhas_de_estoque_e_solicitacoes_de_compras.md)
 
 ## Download da aplicação
 Para executar a aplicação, certifique-se de ter instalada a versão mais recente do Python. Que você pode obter no [Site oficial](python.org)
