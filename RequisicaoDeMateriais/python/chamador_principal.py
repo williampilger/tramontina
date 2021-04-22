@@ -12,14 +12,15 @@ except:
     restart_program()
 
 def baixa_arquivo(url, destino):
-    dados = requests.get(url)#faz download do arquivo
-    if (dados.status_code == requests.codes.OK):
-        with open(destino, "wb") as arquivo:
-        arquivo.write(dados.content)
-    else:
+    try:
+        dados = requests.get(url)#faz download do arquivo
+    except:
         print("Falha ao obter o arquivo fonte. Tentaremos instalar os sertificados, e na sequência poderá tentar novamente.")
         os.system("pip install python-certifi-win32") #já que não sei se está instalada, instalo sempre que falhar
         restart_program()
+
+    with open(destino, "wb") as arquivo:
+        arquivo.write(dados.content)
 
 def main():
     programa = baixa_arquivo("https://raw.githubusercontent.com/williampilger/tramontina/master/RequisicaoDeMateriais/python/cpm_autotype.py", "cache")
