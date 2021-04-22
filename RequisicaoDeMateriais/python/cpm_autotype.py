@@ -190,10 +190,7 @@ def solicita_compra_avancado():
             time.sleep(delay_entre_requisicao)#1s entre uma requisição e outra
 
 def mensagem_sobre():
-    import requests #isso deve estar instalado, se a pessoa usou o chamador_principal.py
-    dados = requests.get("https://raw.githubusercontent.com/williampilger/tramontina/master/RequisicaoDeMateriais/python/sobreoscript.help")#faz download do arquivo
-    print(dados.content)
-    os.system("pause")
+    webbrowser.open("https://raw.githubusercontent.com/williampilger/tramontina/master/RequisicaoDeMateriais/python/sobreoscript.help")
     return
 
 def ajuda():
