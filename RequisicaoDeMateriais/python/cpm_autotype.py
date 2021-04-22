@@ -191,7 +191,7 @@ def solicita_compra_avancado():
 
 
 def mensagem_sobre():
-    print("Versão V4.1")
+    print("Versão V5.1")
     print("\n Desenvolvido por William Pilger")
     print("\n\n Historico de alterações:")
     print(" 10/03/2021 - Delays dinâminos na parte de compra de materiais;")
