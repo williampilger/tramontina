@@ -212,27 +212,10 @@ def mensagem_sobre():
 def ajuda():
     webbrowser.open("https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais")
     return
-  
-def inicio():
-    while True:
-        print("Tramontina S.A. Cutelaria\n\n\nBy: William Pilger")
-        print("Escolha uma das opções abaixo:\n    (1) Requisição de materiais\n    (2) Solicitação de compras\n\n    (8) Sair\n    (9) Ajuda\n    (0) Sobre este script\n\n")
-        opcao = int(input("Sua opção: "))
-        if (opcao == 0):
-            mensagem_sobre()
-        elif (opcao == 1):
-            requisita_materiais_avancado()
-            return #sair da aplicação
-        elif (opcao == 2):
-            solicita_compra_avancado()
-            return #sair da aplicação
-        elif (opcao == 9):
-            ajuda()
-        elif (opcao == 8):
-            return #sair
-        elif (opcao == 69):
-            os.system("cls")
-            print("""            (//                                                                 
+
+def easteregg_1():
+    os.system("cls")
+    print("""            (//                                                                 
             /***(/, &/%.&      /%*//                            .   /*          
              (*(&////////////#****%(                      %         /           
                @((///(/(&//(&(/*/#(                     /                       
@@ -253,9 +236,29 @@ def inicio():
                       %&@    &&#         &&@    &&&                             
                    &&&&*    &&&.     /&&&&     .&&&                             
                           &&&&(               &&&&""")
-            print("Pau no cú do Raposão!!!")
-            input()
-            return
+    print("Pau no cú do Raposão!!!")
+    os.system("pause")
+    os.system("cls")
+  
+def inicio():
+    while True:
+        print("Tramontina S.A. Cutelaria\n\n\nBy: William Pilger")
+        print("Escolha uma das opções abaixo:\n    (1) Requisição de materiais\n    (2) Solicitação de compras\n\n    (8) Sair\n    (9) Ajuda\n    (0) Sobre este script\n\n")
+        opcao = int(input("Sua opção: "))
+        if (opcao == 0):
+            mensagem_sobre()
+        elif (opcao == 1):
+            requisita_materiais_avancado()
+            return #sair da aplicação
+        elif (opcao == 2):
+            solicita_compra_avancado()
+            return #sair da aplicação
+        elif (opcao == 9):
+            ajuda()
+        elif (opcao == 8):
+            return #sair
+        elif (opcao == 69):
+            easteregg_1()
         else:
             print("Opção inválida!")
 
