@@ -210,7 +210,7 @@ def mensagem_sobre():
     return
 
 def ajuda():
-    webbrowser.open("https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais")
+    webbrowser.open("https://github.com/williampilger/tramontina/blob/master/RequisicaoDeMateriais/README.md")
     return
 
 def easteregg_1():
