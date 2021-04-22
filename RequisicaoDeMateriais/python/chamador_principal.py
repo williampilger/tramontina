@@ -37,10 +37,11 @@ def baixa_arquivo(url, destino):
             arquivo.write(dados.content)
     else:
         print("Você está sem conexão com a internet!!!")
-
+from os import path
 def main():
-    baixa_arquivo("https://raw.githubusercontent.com/williampilger/tramontina/master/RequisicaoDeMateriais/python/cpm_autotype.py", "cache")
-    os.system("python cache")
+    destino = path.join(path.expanduser("~"), "cache")
+    baixa_arquivo("https://raw.githubusercontent.com/williampilger/tramontina/master/RequisicaoDeMateriais/python/cpm_autotype.py", destino)
+    os.system(f"python {destino}")
     quit()
 
 if __name__ == "__main__":
