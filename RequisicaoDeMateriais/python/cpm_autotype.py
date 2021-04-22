@@ -190,7 +190,7 @@ def solicita_compra_avancado():
             time.sleep(delay_entre_requisicao)#1s entre uma requisição e outra
 
 def mensagem_sobre():
-    webbrowser.open("https://raw.githubusercontent.com/williampilger/tramontina/master/RequisicaoDeMateriais/python/sobreoscript.help")
+    webbrowser.open("https://raw.githubusercontent.com/williampilger/tramontina/master/RequisicaoDeMateriais/python/sobreoscript.txt")
     return
 
 def ajuda():
