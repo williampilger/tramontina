@@ -207,6 +207,13 @@ def mensagem_sobre():
     print(" 16/04/2021 - Função para baixar automaticamente bibliotecas por ventura não instaladas")
     print("            - Loop na tela inicial")
     print("            - Tela de ajuda implementada")
+    print(" 21/04/2021 - Implementado chamador princilap")
+    print("            - Função de download automático de mais bibliotecas possivelmente necessárias")
+    print(" 22/04/2021 - Correção de bugs da atualização automática")
+    print("            - Adicionada função para executar código em cache caso não haja internet")
+    print("            - Tratamento de erros relacionados à falha de comunicação do github")
+    print("\n                          By: William Pilger\n")
+    os.system("pause")
     return
 
 def ajuda():
@@ -261,6 +268,7 @@ def inicio():
             easteregg_1()
         else:
             print("Opção inválida!")
+        os.system("cls") #limpar tela
 
 if (__name__ == "__main__"):
     inicio()
