@@ -192,7 +192,7 @@ def solicita_compra_avancado():
 def mensagem_sobre():
     import requests #isso deve estar instalado, se a pessoa usou o chamador_principal.py
     dados = requests.get("https://github.com/williampilger/tramontina/blob/master/RequisicaoDeMateriais/python/sobreoscript.txt")#faz download do arquivo
-    print(dados)
+    print(dados.content)
     os.system("pause")
     return
 
