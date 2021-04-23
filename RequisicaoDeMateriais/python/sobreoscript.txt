@@ -1,4 +1,4 @@
-Versão V6
+Versão V6.1
 
  Desenvolvido por William Pilger
 
@@ -29,5 +29,6 @@ Versão V6
             - Correção de falha na reação ao erro de ERP inexistente da solicitação de compra
             - Previsão de reação caso o usuário informe dois ERPs iguais
             - Correção de falha na verificação de repetição de itens
+            - Função que retorna ao console do python quando existem falhas e as apresenta
 
                           By: William Pilger

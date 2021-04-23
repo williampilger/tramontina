@@ -39,7 +39,6 @@ def lista_falha(linha):
         arquivo.writelines(f"\n{linha}")
     return
 
-
 def requisita_materiais_avancado():
     delay_entre_requisicao = 0.5 #delay entre as requisicoes
     delay_aguarda_erro = 0.05 #delay para aguardar mensagem de erro em alguma etapa da requisicao
@@ -108,8 +107,11 @@ def requisita_materiais_avancado():
                     break #ignora o resto da linha
             time.sleep(delay_entre_requisicao)#delay entre uma requisição e outra
     if falhas:
-        print("ATENÇÃO!\nHOUVERAM FALHAS AO LONGO DA REQUISIÇÃO!\nVERIFIQUE O ARQUIVO COM AS FALHAS!")
+        os.system("cls")
+        print("ATENÇÃO!\nHOUVERAM FALHAS AO LONGO DA REQUISIÇÃO!\nVERIFIQUE O ARQUIVO COM AS FALHAS!\n\nPressione enter para abrir o arquivo automaticamente")
+        busca_janela("py.exe", 6)
         input()
+        os.system("start falhas.txt")
 
 
 def solicita_compra_avancado():
@@ -133,8 +135,9 @@ def solicita_compra_avancado():
         for linha in arquivo:
             if not nome_janela_deve_conter in GetWindowText(GetForegroundWindow()):
                 print(f'Você não está mais na janela do {nome_janela_deve_conter}')
+                input()
                 return
-            print("{:.100s}".format(linha))
+            print("{:.100s}".format(linha[:len(linha)-1]))
             etapa = 0
             posilinha = 0 #conta os caracteres da linha(usado somente para detectar o final de arquivo
             temp = ""
@@ -226,8 +229,11 @@ def solicita_compra_avancado():
                     break #ignora o resto da linha, caso chegue aqui
             time.sleep(delay_entre_requisicao)#1s entre uma requisição e outra
     if falhas:
-        print("ATENÇÃO!\nHOUVERAM FALHAS AO LONGO DA REQUISIÇÃO!\nVERIFIQUE O ARQUIVO COM AS FALHAS!")
+        os.system("cls")
+        print("ATENÇÃO!\nHOUVERAM FALHAS AO LONGO DA REQUISIÇÃO!\nVERIFIQUE O ARQUIVO COM AS FALHAS!\n\nPressione enter para abrir o arquivo automaticamente")
+        busca_janela("py.exe", 6)
         input()
+        os.system("start falhas.txt")
 
 def mensagem_sobre():
     webbrowser.open("https://raw.githubusercontent.com/williampilger/tramontina/master/RequisicaoDeMateriais/python/sobreoscript.txt")
