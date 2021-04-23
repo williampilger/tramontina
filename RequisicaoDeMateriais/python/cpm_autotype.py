@@ -67,7 +67,8 @@ def requisita_materiais_avancado():
             temp = ""
             for letra in linha:
                 if(letra == '\n' and etapa == 0):
-                    print("Final de linha encontrado antes do esperado")
+                    print("Final de linha encontrado antes do esperado!\nPROCESSO ABORTADO\n\nPressione Enter para SAIR")
+                    #input()
                     return
                 if(letra == '\t' or letra == '\n'):
                     if (etapa == 0):#acabou de ler ERP
@@ -113,13 +114,13 @@ def requisita_materiais_avancado():
 
 def solicita_compra_avancado():
     nome_janela_deve_conter = "cmp076" #variável que armazena o nime da janela que deve ser procurada
+    nome_janela_erro = "Atenção" #nome que será encontrado na janela de erro, caso ocorra
     delay_entre_requisicao = 0.05
     delay_aguarda_erro = 0.05 #delay para aguardar mensagem de erro em alguma etapa da requisicao
     delay_entre_hotkeys = 0.1
+    falhas = False #ao final, estará em True se ocorrer alguma falha
     print(f'Esteja com o {nome_janela_deve_conter} aberto e com o cursor no campo para digitar o primeiro ERP')
     input("Tecle ENTER quando estiver pronto: ")
-    print(f'Buscando janela do {nome_janela_deve_conter}')
-    
     print(f'Buscando janela do {nome_janela_deve_conter}')
     if(busca_janela(nome_janela_deve_conter, 6)):
         print("Janela encontrada!")
@@ -135,9 +136,15 @@ def solicita_compra_avancado():
                 return
             print("{:.100s}".format(linha))
             etapa = 0
+            posilinha = 0 #conta os caracteres da linha(usado somente para detectar o final de arquivo
+            temp = ""
             for letra in linha:
-                if(letra == '\n' and etapa <= 2):
-                    print("Final de linha encontrado antes do esperado")
+                posilinha += 1
+                if (len(linha) == posilinha):
+                    letra = "\n" #forçar o interpretador a ver o final de linha aqui (somente ocorre no final do arquivo quando não tem um enter)
+                if(letra == '\n' and etapa < 2):
+                    print("Final de linha encontrado antes do esperado!\nPROCESSO ABORTADO\n\nPressione Enter para SAIR")
+                    input()
                     return
                 if(letra == '\t' or letra == '\n'):
                     if (etapa == 0):#acabou de ler o ERP
@@ -145,37 +152,47 @@ def solicita_compra_avancado():
                             temp = "0" + temp
                         pyautogui.write(temp)#escreve o ERP
                         pyautogui.press('tab')
-                        time.sleep(delay_entre_hotkeys)
-                        pyautogui.hotkey('ctrl', '1')
-                        time.sleep(delay_entre_hotkeys)
-                        pyautogui.press('enter')
-                        time.sleep(delay_entre_hotkeys)
+                        time.sleep(delay_aguarda_erro)#aguarda possível janela de erro
+                        if (nome_janela_erro in GetWindowText(GetForegroundWindow())):
+                            pyautogui.press('enter') #pressiona enter para fechar a janela, estando pronto para o proximo ERP
+                            if not falhas:
+                                lista_falha(f"\n{datetime.now()} - ITENS NÃO INCLUÍDOS NA SOLITAÇÃO DE COMPRA")
+                                falhas = True
+                            lista_falha(f"{linha[:len(linha)-1]}\t[ERP INVÁLIDO]")#chama função lista falha
+                            break#ignora o resto da linha
+                        else:
+                            pyautogui.hotkey('ctrl', '1')#confirma referências dos fabricantes
+                            time.sleep(delay_aguarda_erro)#aguarda possível janela de erro
+                            if (nome_janela_erro in GetWindowText(GetForegroundWindow())):
+                                pyautogui.press('n')#indica que não vai solicitar nova compra
+                                if not falhas:
+                                    lista_falha(f"\n{datetime.now()} - ITENS NÃO INCLUÍDOS NA SOLITAÇÃO DE COMPRA")
+                                    falhas = True
+                                lista_falha(f"{linha[:len(linha)-1]}\t[ITEM JÁ POSSUI SOLICITAÇÃO PENDENTE]")#chama função lista falha
+                                break #ignora o resto da linha
+                            else:
+                                pyautogui.press('enter')
+                                time.sleep(delay_entre_hotkeys)
                         temp = ""
                     elif(etapa == 1):#acabou de ler a quantidade
                         pyautogui.write(temp) #digita a quantidade
                         pyautogui.press('tab') #confirma quantidade
                         time.sleep(delay_entre_hotkeys)
-                        pyautogui.press('s') #entra para preencher obs tecnica
-                        time.sleep(delay_entre_hotkeys)
-                        pyautogui.press('tab') #entra no campo obs interna
-                        time.sleep(delay_entre_hotkeys)
                         temp = ""
-                    #OPCAO == 2 acaba de varrer a descrição do item
+                    elif(etapa == 2):#só acaba de varrer a descrição do item
+                        if(letra == '\t'):#existe descrição a ser digitada
+                            pyautogui.press('s') #entra para preencher obs tecnica
+                            time.sleep(delay_entre_hotkeys)
+                            pyautogui.press('tab') #entra no campo obs interna
+                            time.sleep(delay_entre_hotkeys)
+                        else:# não existe descrição a ser digitada
+                            pyautogui.press('n') #informa que não vai preencher descrição (cursor parado na data depois disso
+                            time.sleep(delay_entre_hotkeys)
+                            etapa = 3 #definido em 3 aqui, assim que sair do IF acresce 1, e vira 4. Então será finalizada a solicitação do item
                     elif(etapa == 3):#acabou de ler a descrição
                         pyautogui.write(temp)#digita a OBS interna
-                        pyautogui.press('enter')#confirma OBS
+                        pyautogui.press('enter')#confirma OBS (entra no campo da data)
                         time.sleep(delay_entre_hotkeys)
-                        pyautogui.press('enter')#entra na edição da data
-                        time.sleep(delay_entre_hotkeys)
-                        pyautogui.press('enter')#preenche data de hoje
-                        time.sleep(delay_entre_hotkeys)
-                        pyautogui.press('enter')#confirma quantidade todal
-                        time.sleep(delay_entre_hotkeys)
-                        pyautogui.hotkey('ctrl', 'enter')#confirma data e quantidade de entrega
-                        time.sleep(delay_entre_hotkeys)
-                        pyautogui.press('enter')#finaliza requisição
-                        time.sleep(delay_entre_hotkeys)
-                        temp = ""
                     etapa += 1
                 else:
                     if(etapa == 0):#obtendo ERP
@@ -185,9 +202,32 @@ def solicita_compra_avancado():
                     #etapa == 2 varrendo descrição do ítem
                     elif(etapa == 3):#digitando obs interna
                         temp += letra
-                if(etapa == 4):
+                if(etapa == 4):#finaliza solicitação do item
+                    pyautogui.press('enter')#entra na edição da data
+                    time.sleep(delay_aguarda_erro)#aguarda possível janela de erro
+                    if (nome_janela_erro in GetWindowText(GetForegroundWindow())):
+                        pyautogui.press('enter') #pressiona enter para fechar a janela, estando pronto para o proximo ERP
+                        time.sleep(delay_entre_hotkeys)
+                        if not falhas:
+                            lista_falha(f"\n{datetime.now()} - ITENS NÃO INCLUÍDOS NA SOLITAÇÃO DE COMPRA")
+                            falhas = True
+                        lista_falha(f"{linha[:len(linha)-1]}\t[ERP REPETIDO NA MESMA SOLICITAÇÃO DE COMPRA]")#chama função lista falha
+                        break#ignora o resto da linha
+                    else:
+                        pyautogui.press('enter')#preenche data de hoje
+                        time.sleep(delay_entre_hotkeys)
+                        pyautogui.press('enter')#confirma quantidade todal
+                        time.sleep(delay_entre_hotkeys)
+                        pyautogui.hotkey('ctrl', 'enter')#confirma data e quantidade de entrega
+                        time.sleep(delay_entre_hotkeys)
+                        pyautogui.press('enter')#finaliza requisição
+                        time.sleep(delay_entre_hotkeys)
+                    temp = ""
                     break #ignora o resto da linha, caso chegue aqui
             time.sleep(delay_entre_requisicao)#1s entre uma requisição e outra
+    if falhas:
+        print("ATENÇÃO!\nHOUVERAM FALHAS AO LONGO DA REQUISIÇÃO!\nVERIFIQUE O ARQUIVO COM AS FALHAS!")
+        input()
 
 def mensagem_sobre():
     webbrowser.open("https://raw.githubusercontent.com/williampilger/tramontina/master/RequisicaoDeMateriais/python/sobreoscript.txt")

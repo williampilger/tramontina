@@ -1,4 +1,4 @@
-Versão V5.1
+Versão V6
 
  Desenvolvido por William Pilger
 
@@ -22,5 +22,12 @@ Versão V5.1
  22/04/2021 - Correção de bugs da atualização automática
             - Adicionada função para executar código em cache caso não haja internet
             - Tratamento de erros relacionados à falha de comunicação do github
+ 23/04/2021 - Previsão de possível erro na digitação de solicitação de compra
+            - Adicionada função para finalizar ultima solicitação quando não há linha em branco
+            - Adicionada função para identificar automaticamente se há ou não observação na solicitação
+            - Previsão de erro de digitação e solicitação já existente
+            - Correção de falha na reação ao erro de ERP inexistente da solicitação de compra
+            - Previsão de reação caso o usuário informe dois ERPs iguais
+            - Correção de falha na verificação de repetição de itens
 
                           By: William Pilger
