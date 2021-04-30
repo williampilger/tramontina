@@ -2,22 +2,22 @@ import os
 def restart_program():
     os.system(f"python \"{__file__}\"")
     quit()
-    
+
 from datetime import datetime
 import time
 import webbrowser #paga abrir página de ajuda
 try:
-  from win32gui import GetWindowText, GetForegroundWindow #para instalar use >>> pip install pywin32
+    from win32gui import GetWindowText, GetForegroundWindow #para instalar use >>> pip install pywin32
 except:
-  print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\n(CONEXÃO COM INTERNET NECESSÁRIA)")
-  os.system("pip install pywin32")
-  restart_program()
+    print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\n(CONEXÃO COM INTERNET NECESSÁRIA)")
+    os.system("pip install pywin32")
+    restart_program()
 try:
-  import pyautogui # para instalar use >>> pip install pyautogui
+    import pyautogui # para instalar use >>> pip install pyautogui
 except:
-  print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\n(CONEXÃO COM INTERNET NECESSÁRIA)")
-  os.system("pip install pyautogui")
-  restart_program()
+    print("\nINSTALANDO BIBLIOTECA NECESSÁRIA, AGUARDE!\n(CONEXÃO COM INTERNET NECESSÁRIA)")
+    os.system("pip install pyautogui")
+    restart_program()
 
 def busca_janela(chave_janela, tentativas):
     #Recebe a string chave, e o número de tentativas de alt+tab deve-se tentar
@@ -44,6 +44,7 @@ def requisita_materiais_avancado():
     delay_aguarda_erro = 0.05 #delay para aguardar mensagem de erro em alguma etapa da requisicao
     nome_janela_deve_conter = "cmp072" #variável que armazena o nime da janela que deve ser procurada
     nome_janela_erro = "Atenção" #nome que será encontrado na janela de erro, caso ocorra
+    nome_janela_senha = "Senha" #nome da janela que pede senha individual de item 
 
     falhas = False #ao final, estará em True se ocorrer alguma falha
     print("ATENÇÃO: Ao confirmar a seção de entrega a digitação iniciará automaticamente!")
@@ -82,6 +83,19 @@ def requisita_materiais_avancado():
                                 falhas = True
                             lista_falha(f"{linha[:len(linha)-1]}\t[ERP INVÁLIDO]")#chama função lista falha
                             etapa = 1#ignora o resto da linha (definindo agora em 1, assim que sair do IF já acrescenta 1, e estará em 2)
+                        elif(nome_janela_senha in GetWindowText(GetForegroundWindow())):
+                            while True:
+                                busca_janela("py.exe", 6)#volta pra janela do python
+                                senha = input("Informe a senha do item acima: ")
+                                if(not busca_janela(nome_janela_senha, 6)):
+                                    print("Não foi possível localizar a janela. Finalizando")
+                                    return
+                                pyautogui.write("{}\n".format(senha)) #digita senha e pressiona enter
+                                if(nome_janela_erro in GetWindowText(GetForegroundWindow())):
+                                    pyautogui.press('enter') #pressiona enter para fechar a janela, estando pronto para o proximo ERP
+                                    print("SENHA INVÁLIDA!")
+                                else:
+                                    break #sai do laço.
                         temp = "" #limpa a variável temporária
                     elif(etapa == 1):#acabou de digitar a quantidade
                         pyautogui.write("{}\t".format(temp))#digita a quantidade e pressiona TAB
