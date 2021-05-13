@@ -287,6 +287,14 @@ def easteregg_1():
 def inicio():
     while True:
         print("Tramontina S.A. Cutelaria\n\n\nBy: William Pilger")
+        print("\nPATROCÍNIO:")
+        print("   @@@  @@@@  @@@")
+        print("    @    @@   @   @@@@@")
+        print("     @  @  @ @    @    @")
+        print("      @     @     @@@@@")
+        print("     @@@   @@@    @")
+        print("                  @      Engenharia")
+        print("                 @@@\n\n")
         print("Escolha uma das opções abaixo:\n    (1) Requisição de materiais\n    (2) Solicitação de compras\n\n    (8) Sair\n    (9) Ajuda\n    (0) Sobre este script\n\n")
         opcao = int(input("Sua opção: "))
         if (opcao == 0):
