@@ -1,4 +1,4 @@
-Versão V6.1
+Versão V7.0
 
  Desenvolvido por William Pilger
 
@@ -30,5 +30,5 @@ Versão V6.1
             - Previsão de reação caso o usuário informe dois ERPs iguais
             - Correção de falha na verificação de repetição de itens
             - Função que retorna ao console do python quando existem falhas e as apresenta
-
+ 1908/2021  - Inclusão de campo para comprador
                           By: William Pilger
