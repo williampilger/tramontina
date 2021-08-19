@@ -237,6 +237,8 @@ def solicita_compra_avancado():
                         time.sleep(delay_entre_hotkeys)
                         pyautogui.hotkey('ctrl', 'enter')#confirma data e quantidade de entrega
                         time.sleep(delay_entre_hotkeys)
+                        pyautogui.write("10");#informa comprador
+                        pyautogui.press('enter');
                         pyautogui.press('enter')#finaliza requisição
                         time.sleep(delay_entre_hotkeys)
                     temp = ""
@@ -295,6 +297,7 @@ def inicio():
         print("     @@@   @@@    @")
         print("                  @      Engenharia")
         print("                 @@@\n\n")
+        print("V - 7.0")
         print("Escolha uma das opções abaixo:\n    (1) Requisição de materiais\n    (2) Solicitação de compras\n\n    (8) Sair\n    (9) Ajuda\n    (0) Sobre este script\n\n")
         opcao = int(input("Sua opção: "))
         if (opcao == 0):
