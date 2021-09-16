@@ -288,7 +288,7 @@ def easteregg_1():
   
 def inicio():
     while True:
-        print("Tramontina S.A. Cutelaria\n\n\n")
+        print("\n\n    Tramontina S.A. Cutelaria")
         print("  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         print(" @                                                                               @")
         print("@  ######  ####     ##     #    ##    ####    #    #  ###### #  ##    #    ##     @")
