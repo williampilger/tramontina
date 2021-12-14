@@ -14,7 +14,7 @@ Para executar a aplicação, certifique-se de ter instalada a versão mais recen
 - Baixe o [Codigo Fonte](https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/chamador_principal.py) (Use Ctrl+S para salvar) - SUGERIDO
 - Baixe o [Executável para Windows 10](https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/old_versions/tramontina_cpm_autotype-v4.1.exe) - [DESCONTINUADO]
 - Baixe o [Executável para Windows 7](https://github.com/williampilger/tramontina/raw/master/RequisicaoDeMateriais/python/old_versions/tramontina_cpm_autotype-v4.1_win7.exe) - [DESCONTINUADO]
-- Ou visite a [pasta do projeto](https://github.com/williampilger/tramontina/tree/master/Requisi%C3%A7%C3%A3o%20de%20materiais).
+- Ou visite a [pasta do projeto](/python).
 
 Você encontra os passo-a-passo para atualizar os dados das planilhas do banco de dados [aqui](https://github.com/williampilger/tramontina/blob/master/RequisicaoDeMateriais/README.md).
 
